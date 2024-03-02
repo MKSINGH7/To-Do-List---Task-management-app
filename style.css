@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 32px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto 30px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+input[type="text"] {
+  width: 300px;
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid white;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  transform: scale(1.02);
+}
+
+button[type="submit"] {
+  width: 120px;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  background: #ffd700;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+button[type="submit"]:hover {
+  background: #ffed4e;
+  transform: scale(1.05);
+}
+
+button[type="submit"]:active {
+  transform: scale(0.98);
+}
+
+#allTask {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#allTask div {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#allTask span {
+  flex: 1;
+  font-size: 16px;
+  word-break: break-word;
+}
+
+#allTask button {
+  padding: 8px 12px;
+  margin-left: 8px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#allTask button:first-of-type {
+  background: #4caf50;
+  color: white;
+}
+
+#allTask button:first-of-type:hover {
+  background: #45a049;
+  transform: translateY(-2px);
+}
+
+#allTask button:last-of-type {
+  background: #f44336;
+  color: white;
+}
+
+#allTask button:last-of-type:hover {
+  background: #da190b;
+  transform: translateY(-2px);
+}
+
+#allTask button:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  form {
+    flex-direction: column;
+  }
+
+  input[type="text"] {
+    width: 100%;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+  }
+
+  #allTask div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #allTask button {
+    margin-top: 8px;
+    margin-left: 0;
+  }
+}
